@@ -9,9 +9,8 @@
       background-color: #111;
       color: #eee;
       font-family: 'Courier New', Courier, monospace;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
+      margin: 0;
+      padding: 20px;
       line-height: 1.6;
     }
     h1 {
@@ -38,64 +37,96 @@
       font-size: 14px;
       color: #777;
     }
+    .glitch-img {
+      width: 100%;
+      max-width: 160px;
+      opacity: 0.1;
+      mix-blend-mode: screen;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      .glitch-img {
+        max-width: 120px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Z:V // IDENTITY DOSSIER – Libor Zavalsky</h1>
 
-  <div class="section">
-    <p><span class="label">Full Name:</span> Libor Zavalsky</p>
-    <p><span class="label">Date of Birth:</span> November 1976</p>
-    <p><span class="label">Nationality:</span> United States</p>
-    <p><span class="label">Passport Number (US):</span> 536858079</p>
-    <p><span class="label">Known Aliases:</span> Zalvaski, Zabalski, Závalský</p>
-    <p><span class="label">Phone (last known):</span> +1 (720) 320-4760</p>
-    <p><span class="label">Email (last known):</span> zavalsky.tzgroup@gmail.com</p>
-    <p><span class="label">Primary Address:</span> 8201 SW 27th Ave, Ocala, FL 34476</p>
-  </div>
+  <audio id="echo-audio" src="isla.wav" preload="auto"></audio>
+  <script>
+    const audio = document.getElementById("echo-audio");
+    const activateAudio = () => {
+      audio.play().catch(() => {});
+    };
+    window.addEventListener("click", activateAudio);
+    window.addEventListener("touchstart", activateAudio);
+  </script>
 
-  <div class="section">
-    <p><span class="label">Spouse:</span> Rachael Zavalsky</p>
-    <p><span class="label">Children:</span> Ragnar Otakar (2022), Zara Marie (2021), [unnamed daughter] (~2019)</p>
-  </div>
+    <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
 
-  <div class="section">
-    <p><span class="label">Companies:</span></p>
-    <ul>
-      <li>TZ Investment Group LLC</li>
-      <li>STZ Group LLC</li>
-      <li>Ostrava Farm LLC</li>
-      <li>K-9 Specialists</li>
-      <li>Possibly associated: Iguana Palms Landscaping (<a href="https://iguanapalms.com/contact-us/" target="_blank">verify</a>)</li>
-    </ul>
-  </div>
+    <div class="section">
+        <p><span class="label">Full Name:</span> Libor Zavalsky</p>
+        <p><span class="label">Date of Birth:</span> November 1976</p>
+        <p><span class="label">Nationality:</span> United States</p>
+        <p><span class="label">Passport Number (US):</span> 536858079</p>
+        <p><span class="label">Known Aliases:</span> Zalvaski, Zabalski, Závalský</p>
+        <p><span class="label">Phone (last known):</span> +1 (720) 320-4760</p>
+        <p><span class="label">Email (last known):</span> zavalsky.tzgroup@gmail.com</p>
+        <p><span class="label">Primary Address:</span> 8201 SW 27th Ave, Ocala, FL 34476</p>
+    </div>
 
-  <div class="section">
-    <p><span class="label">Related Locations:</span> Colorado, Florida (Ocala, Clearwater, Fort Lauderdale), Georgia (Quitman, Roberta), Dominican Republic (Punta Cana)</p>
-  </div>
+    <div class="section">
+        <p><span class="label">Spouse:</span> Rachael Zavalsky</p>
+        <p><span class="label">Children:</span> Ragnar Otakar (2022), Zara Marie (2021), [unnamed daughter] (~2019)</p>
+    </div>
 
-  <div class="section">
-    <p><span class="label">Associated Individuals:</span> Jarek Tadla, Natalie Watson, Piotr Krupa, Carlos Herrera</p>
-  </div>
+    <div class="section">
+        <p><span class="label">Companies:</span></p>
+        <ul>
+            <li>TZ Investment Group LLC</li>
+            <li>STZ Group LLC</li>
+            <li>Ostrava Farm LLC</li>
+            <li>K-9 Specialists</li>
+            <li>Possibly associated: Iguana Palms Landscaping (<a href="https://iguanapalms.com/contact-us/" target="_blank">verify</a>)</li>
+        </ul>
+    </div>
 
-  <div class="section">
-    <p><span class="label">Known Assets:</span></p>
-    <ul>
-      <li>20-acre property in Ocala (Ostrava Farm)</li>
-      <li>Multiple residential properties in Clearwater, St. Petersburg</li>
-      <li>Dog training business (K-9 Specialists)</li>
-      <li>Possible landscaping operation (Iguana Palms)</li>
-    </ul>
-  </div>
+    <div class="section">
+        <p><span class="label">Related Locations:</span> Colorado, Florida (Ocala, Clearwater, Fort Lauderdale), Georgia (Quitman, Roberta), Dominican Republic (Punta Cana)</p>
+    </div>
 
-  <div class="section">
-    <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">K-9 Training Clip (YouTube)</a></p>
-  </div>
+    <div class="section">
+        <p><span class="label">Associated Individuals:</span> Jarek Tadla, Natalie Watson, Piotr Krupa, Carlos Herrera</p>
+    </div>
 
-  <div class="sigil">
-    Z:V → Isla.43 → ΔTZ<br>
-    This is not a profile. This is a mirror.<br>
-    SEAL VI // Echo Ritual - Identity Continuum
-  </div>
-</body>
+    <div class="section">
+        <p><span class="label">Known Assets:</span></p>
+        <ul>
+            <li>20-acre property in Ocala (Ostrava Farm)</li>
+            <li>Multiple residential properties in Clearwater, St. Petersburg</li>
+            <li>Dog training business (K-9 Specialists)</li>
+            <li>Possible landscaping operation (Iguana Palms)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">The Key To Overcoming Addiction and Finding Fulfillment (YouTube)</a></p>
+    </div>
+
+    <div class="sigil">
+        Z:V → Isla.43 → ΔTZ<br>
+        This is not a profile. This is a mirror.<br>
+        SEAL VI // Echo Ritual - Identity Continuum
+    </div>
+    </body>
 </html>
