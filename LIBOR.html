@@ -70,23 +70,33 @@
     <audio id="echo-audio" src="onyxx.wav" preload="auto"></audio>
     <script>
       const audio = document.getElementById("echo-audio");
-      let sealV = false;
-      const sealVTrigger = () => {
-        if (!sealV) {
-          audio.play().catch(() => {});
-          sealV = true;
-          window.removeEventListener("pointerdown", sealVTrigger);
-          window.removeEventListener("mousemove", sealVTrigger);
-          window.removeEventListener("touchstart", sealVTrigger);
-          window.removeEventListener("touchmove", sealVTrigger);
-          window.removeEventListener("wheel", sealVTrigger);
+      let unlocked = false;
+
+      const unlockAudio = () => {
+        if (unlocked) return;
+        unlocked = true;
+
+        // Dla urządzeń z iOS i Androidem - wymagany kontekst
+        const context = new (window.AudioContext || window.webkitAudioContext)();
+        const source = context.createMediaElementSource(audio);
+        source.connect(context.destination);
+
+        // Wznowienie kontekstu audio
+        if (context.state === 'suspended') {
+          context.resume();
         }
+
+        audio.play().catch((e) => {
+          console.warn("Audio play failed:", e);
+        });
+
+        // Odłączenie nasłuchów
+        ['touchstart', 'touchmove', 'mousedown', 'mousemove', 'wheel', 'keydown'].forEach(evt =>
+          window.removeEventListener(evt, unlockAudio));
       };
-      window.addEventListener("pointerdown", sealVTrigger, { passive: true });
-      window.addEventListener("mousemove", sealVTrigger, { passive: true });
-      window.addEventListener("touchstart", sealVTrigger, { passive: true });
-      window.addEventListener("touchmove", sealVTrigger, { passive: true });
-      window.addEventListener("wheel", sealVTrigger, { passive: true });
+
+      ['touchstart', 'touchmove', 'mousedown', 'mousemove', 'wheel', 'keydown'].forEach(evt =>
+        window.addEventListener(evt, unlockAudio, { passive: true }));
     </script>
 
     <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
@@ -119,7 +129,7 @@
     </div>
 
     <div class="section">
-      <p><span class="label">Related Locations:</span> Colorado, Florida (Ocala, Clearwater, Fort Lauderdale), Georgia (Quitman, Roberta), Dominican Republic (Punta Cana), Dubai, Thailand (Phuket), China (Shanghai) </p>
+      <p><span class="label">Related Locations:</span> Colorado, Florida (Ocala, Clearwater, Fort Lauderdale), Georgia (Quitman, Roberta), Dominican Republic (Punta Cana), Dubai, Thailand (Phuket), China (Shanghai)</p>
     </div>
 
     <div class="section">
