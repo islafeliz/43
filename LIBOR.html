@@ -9,7 +9,7 @@
       background-color: #111;
       color: #eee;
       font-family: 'Courier New', Courier, monospace;
-      margin: 0;
+      margin: 10;
       padding: 20px;
       line-height: 1.6;
     }
@@ -70,27 +70,27 @@
     <audio id="echo-audio" src="onyxx.wav" preload="auto"></audio>
     <script>
       const audio = document.getElementById("echo-audio");
-      let isPlayed = false;
+      let unlocked = false;
 
-      function playAudio() {
-        if (!isPlayed) {
-          audio.play().then(() => {
-            console.log("Audio triggered.");
-          }).catch((e) => {
-            console.warn("Audio play blocked:", e);
-          });
-          isPlayed = true;
-
-          // Remove event listeners after first successful trigger
-          ["click", "touchend", "keydown", "mousedown", "mousemove", "wheel"].forEach(eventType =>
-            document.removeEventListener(eventType, playAudio)
-          );
+      function unlockAudioDirect(e) {
+        if (unlocked) return;
+        unlocked = true;
+        try {
+          audio.play();
+          console.log("AUDIO UNLOCKED");
+        } catch (err) {
+          console.warn("FAILED:", err);
         }
+
+        // Remove listeners after first interaction
+        ["click", "touchstart", "keydown"].forEach(evt =>
+          window.removeEventListener(evt, unlockAudioDirect)
+        );
       }
 
-      // Bind to all reasonable user interactions
-      ["click", "touchend", "keydown", "mousedown", "mousemove", "wheel"].forEach(eventType =>
-        document.addEventListener(eventType, playAudio, { passive: true })
+      // Direct trigger listeners (only those allowed by autoplay policy)
+      ["click", "touchstart", "keydown"].forEach(evt =>
+        window.addEventListener(evt, unlockAudioDirect)
       );
     </script>
 
