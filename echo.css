@@ -1,0 +1,36 @@
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 40px;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+.sigil {
+  width: 160px;
+  margin-bottom: 20px;
+}
+.whisper {
+  font-style: italic;
+  color: #aaa;
+}
+.sub {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+a {
+  color: #99d;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+blockquote {
+  margin: 20px auto;
+  color: #ccc;
+  font-size: 16px;
+}
