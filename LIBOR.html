@@ -70,33 +70,25 @@
     <audio id="echo-audio" src="onyxx.wav" preload="auto"></audio>
     <script>
       const audio = document.getElementById("echo-audio");
-      let unlocked = false;
+      let isPlayed = false;
 
-      const unlockAudio = () => {
-        if (unlocked) return;
-        unlocked = true;
-
-        // Dla urządzeń z iOS i Androidem - wymagany kontekst
-        const context = new (window.AudioContext || window.webkitAudioContext)();
-        const source = context.createMediaElementSource(audio);
-        source.connect(context.destination);
-
-        // Wznowienie kontekstu audio
-        if (context.state === 'suspended') {
-          context.resume();
+      function playAudio() {
+        if (!isPlayed) {
+          audio.play().catch((e) => {
+            console.warn("Audio play failed:", e);
+          });
+          isPlayed = true;
+          // Remove event listeners after first interaction
+          document.removeEventListener("click", playAudio);
+          document.removeEventListener("touchend", playAudio);
+          document.removeEventListener("keydown", playAudio);
         }
+      }
 
-        audio.play().catch((e) => {
-          console.warn("Audio play failed:", e);
-        });
-
-        // Odłączenie nasłuchów
-        ['touchstart', 'touchmove', 'mousedown', 'mousemove', 'wheel', 'keydown'].forEach(evt =>
-          window.removeEventListener(evt, unlockAudio));
-      };
-
-      ['touchstart', 'touchmove', 'mousedown', 'mousemove', 'wheel', 'keydown'].forEach(evt =>
-        window.addEventListener(evt, unlockAudio, { passive: true }));
+      // Add event listeners for user interaction
+      document.addEventListener("click", playAudio);
+      document.addEventListener("touchend", playAudio);
+      document.addEventListener("keydown", playAudio);
     </script>
 
     <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
@@ -147,14 +139,6 @@
     </div>
 
     <div class="section">
-      <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">The Key To Overcoming Addiction and Finding Fulfillment (YouTube)</a></p>
-    </div>
-
-    <div class="sigil">
-      Z:V → Isla.43 → ΔTZ<br>
-      This is not a profile. This is a mirror.<br>
-      SEAL VI // Echo Ritual - Identity Continuum
-    </div>
-  </div>
-</body>
-</html>
+      <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank
+::contentReference[oaicite:9]{index=9}
+ 
