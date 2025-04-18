@@ -1,15 +1,16 @@
-// /sigil/mirror.js
+// /sigil/mirror.js – extended version with audio + fingerprint
 
 window.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro");
+  if (intro) {
+    setTimeout(() => {
+      intro.style.transition = "opacity 2s ease-in-out";
+      intro.style.opacity = 1;
+    }, 2000);
+  }
 
-  setTimeout(() => {
-    intro.style.transition = "opacity 2s ease-in-out";
-    intro.style.opacity = 1;
-  }, 2000);
-
-  const fakeIP = `IP: ${randomIP()} // Browser: ${navigator.userAgent.split(' ')[0]}`;
-
+  // Display fake fingerprint
+  const fakeIP = `IP: ${randomIP()} | Browser: ${navigator.userAgent.split(' ')[0]} | Lang: ${navigator.language}`;
   const footer = document.createElement("div");
   footer.style.position = "fixed";
   footer.style.bottom = "10px";
@@ -18,8 +19,23 @@ window.addEventListener("DOMContentLoaded", () => {
   footer.style.color = "#444";
   footer.style.fontFamily = "monospace";
   footer.innerText = `we see you. ${fakeIP}`;
-
   document.body.appendChild(footer);
+
+  // Inject whisper audio after delay
+  const audio = new Audio("/sigil/echo1.wav");
+  audio.volume = 0.3;
+  setTimeout(() => {
+    audio.play().catch(() => {});
+  }, 6000);
+
+  // Optional glitch flash
+  setTimeout(() => {
+    document.body.style.transition = "all 0.2s";
+    document.body.style.backgroundColor = "#111";
+    setTimeout(() => {
+      document.body.style.backgroundColor = "#000";
+    }, 120);
+  }, 9000);
 });
 
 function randomIP() {
