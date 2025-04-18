@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Z:V // IDENTITY DOSSIER – Libor Zavalsky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       background-color: #111;
       color: #eee;
       font-family: 'Courier New', Courier, monospace;
-      margin: 10;
+      margin: 0;
       padding: 20px;
       line-height: 1.6;
     }
@@ -51,6 +51,19 @@
       right: 20px;
       z-index: 10;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+    }
     @media (max-width: 600px) {
       body {
         padding: 15px;
@@ -82,67 +95,124 @@
           console.warn("FAILED:", err);
         }
 
-        // Remove listeners after first interaction
         ["click", "touchstart", "keydown"].forEach(evt =>
           window.removeEventListener(evt, unlockAudioDirect)
         );
       }
 
-      // Direct trigger listeners (only those allowed by autoplay policy)
       ["click", "touchstart", "keydown"].forEach(evt =>
         window.addEventListener(evt, unlockAudioDirect)
       );
     </script>
 
-    <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
+    <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor" />
 
     <div class="section">
+      <h2>👤 IDENTITY</h2>
       <p><span class="label">Full Name:</span> Libor Zavalsky</p>
       <p><span class="label">Date of Birth:</span> November 1976</p>
-      <p><span class="label">Nationality:</span> United States</p>
+      <p><span class="label">Nationality:</span> USA / Czech origin</p>
       <p><span class="label">Passport Number (US):</span> 536858079</p>
-      <p><span class="label">Known Aliases:</span> Zalvaski, Zabalski, Závalský</p>
-      <p><span class="label">Phone (last known):</span> +1 (720) 320-4760</p>
-      <p><span class="label">Email (last known):</span> zavalsky.tzgroup@gmail.com</p>
-      <p><span class="label">Primary Address:</span> 8201 SW 27th Ave, Ocala, FL 34476</p>
+      <p><span class="label">Known Aliases and Alternate Records:</span></p>
+      <ul>
+        <li>Libor Z.</li>
+        <li>Libor Závalský</li>
+        <li>Zalvaski / Zabalski</li>
+        <li>In Czech records: Libor Zavalský, IČO: 60030984 – active business in Czech Republic</li>
+      </ul>
     </div>
 
     <div class="section">
-      <p><span class="label">Spouse:</span> Rachael Zavalsky</p>
-      <p><span class="label">Children:</span> Ragnar Otakar (2022), Zara Marie (2021), [unnamed daughter] (~2019)</p>
+      <h2>🧬 FAMILY</h2>
+      <p><span class="label">Spouse:</span> Rachael Ashley Zavalsky</p>
+      <ul>
+        <li>Active operator in asset structure (buyer, co-manager, signatory)</li>
+        <li>Appears in all key documents as co-owner</li>
+        <li>Registered as agent in 2022 application (Ocala kennel)</li>
+      </ul>
+      <p><span class="label">Children:</span></p>
+      <ul>
+        <li><strong>Ragnar Otakar Zavalsky</strong> – born October 23, 2022</li>
+        <li><strong>Zara Marie Zavalsky</strong> – born February 17, 2021</li>
+        <li><strong>Third child (older daughter)</strong> – born ~July 2019 (name undisclosed)</li>
+      </ul>
     </div>
 
     <div class="section">
-      <p><span class="label">Companies:</span></p>
+      <h2>🏡 ADDRESSES (REAL LOCATIONS)</h2>
+      <table>
+        <tr><th>Address</th><th>Function</th></tr>
+        <tr><td>8201 SW 27th Ave, Ocala, FL</td><td>Home, system base, company HQ, dog breeding, palm showroom</td></tr>
+        <tr><td>2521 Hickory Head Rd, Quitman, GA</td><td>52-acre farm under CUVA (agri. exemption)</td></tr>
+        <tr><td>1441 Zenith Mill Rd, Roberta, GA</td><td>60-acre ranch, new K-9 base, Iguana Palms showroom</td></tr>
+        <tr><td>128 Lake Ridge Dr, Macon, GA</td><td>Luxury residence ($1M, 2023), likely residence</td></tr>
+        <tr><td>10486 NW 36th Dr, Jasper, FL</td><td>Residential complex (LLC owned, 2022)</td></tr>
+        <tr><td>4 E Howell Dr, Lakeland, GA</td><td>Residential flip (2022)</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>💼 BUSINESS AND PUBLIC ACTIVITY</h2>
+      <p><strong>Companies (USA – FL & GA):</strong></p>
       <ul>
         <li>TZ Investment Group LLC</li>
-        <li>STZ Group LLC</li>
         <li>Ostrava Farm LLC</li>
-        <li>K-9 Specialists</li>
-        <li>Possibly associated: Iguana Palms Landscaping (<a href="https://iguanapalms.com/contact-us/" target="_blank">Contact</a>)</li>
+        <li>Ostrava Farm Roberta LLC</li>
+        <li>Ostrava Residency Quitman LLC</li>
+        <li>2521 Hickory Head LLC</li>
+        <li>128 Lake Ridge LLC</li>
+        <li>K-9 Specialists LLC (FL & GA)</li>
+        <li>Iguana Palms LLC</li>
       </ul>
-    </div>
-
-    <div class="section">
-      <p><span class="label">Related Locations:</span> Colorado, Florida (Ocala, Clearwater, Fort Lauderdale), Georgia (Quitman, Roberta), Dominican Republic (Punta Cana), Dubai, Thailand (Phuket), China (Shanghai)</p>
-    </div>
-
-    <div class="section">
-      <p><span class="label">Associated Individuals:</span> Jarek Tadla, Carlos Herrera</p>
-    </div>
-
-    <div class="section">
-      <p><span class="label">Known Assets:</span></p>
+      <p><strong>European Operations:</strong></p>
       <ul>
-        <li>20-acre property in Ocala (Ostrava Farm)</li>
-        <li>Multiple residential properties in Clearwater, St. Petersburg</li>
-        <li>Dog training business (K-9 Specialists)</li>
-        <li>Possible landscaping operation (Iguana Palms)</li>
+        <li>Czech Republic – IČO 60030984</li>
+        <li>Registered as sole proprietor</li>
+        <li>Potential invoicing / historical operations base</li>
       </ul>
     </div>
 
     <div class="section">
-      <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">The Key To Overcoming Addiction and Finding Fulfillment (YouTube)</a></p>
+      <h2>🐕‍🦺 PROFESSION / PUBLIC IMAGE</h2>
+      <ul>
+        <li>K-9 expert and trainer (German Shepherds)</li>
+        <li>Owner: <strong>K-9 Specialists</strong></li>
+        <li>Palm nursery: <strong>Iguana Palms</strong></li>
+      </ul>
+      <p><strong>Media & Web:</strong></p>
+      <ul>
+        <li><a href="https://k-9specialists.com" target="_blank">k-9specialists.com</a></li>
+        <li><a href="https://iguanapalms.com" target="_blank">iguanapalms.com</a></li>
+        <li><a href="https://www.facebook.com/K9SpecialistsGSD/" target="_blank">Facebook – K9SpecialistsGSD</a></li>
+        <li><a href="https://www.facebook.com/IguanaPalms" target="_blank">Facebook – Iguana Palms</a></li>
+        <li><a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">YouTube Clip</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📞 CONTACT DATA</h2>
+      <table>
+        <tr><th>Number / Email</th><th>Use</th></tr>
+        <tr><td>+1 (720) 320-4760</td><td>Personal (Colorado – historical)</td></tr>
+        <tr><td>+1 (352) 659-0638</td><td>K-9 Specialists (FL)</td></tr>
+        <tr><td>+1 (404) 326-0233</td><td>Iguana Palms (GA)</td></tr>
+        <tr><td>libor@k-9specialists.com</td><td>Main contact</td></tr>
+        <tr><td>zavalsky.tzgroup@gmail.com</td><td>Historic / secondary</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>🎯 OPERATIONAL INSIGHTS</h2>
+      <ul>
+        <li><strong>No separation between private and business life.</strong><br>
+          All transactions under Libor and Rachael's personal names.</li>
+        <li><strong>Childbirth aligned with expansion.</strong><br>
+          Ragnar (2022), Zara (2021) coincide with Jasper / Quitman / Lakeland acquisitions.</li>
+        <li><strong>Home = HQ = Registry Address.</strong><br>
+          8201 SW 27th Ave is the center of all operations.</li>
+        <li><strong>Family = Operational Cell.</strong><br>
+          Husband and wife as managers, agents, signatories.</li>
+      </ul>
     </div>
 
     <div class="sigil">
