@@ -74,21 +74,24 @@
 
       function playAudio() {
         if (!isPlayed) {
-          audio.play().catch((e) => {
-            console.warn("Audio play failed:", e);
+          audio.play().then(() => {
+            console.log("Audio triggered.");
+          }).catch((e) => {
+            console.warn("Audio play blocked:", e);
           });
           isPlayed = true;
-          // Remove event listeners after first interaction
-          document.removeEventListener("click", playAudio);
-          document.removeEventListener("touchend", playAudio);
-          document.removeEventListener("keydown", playAudio);
+
+          // Remove event listeners after first successful trigger
+          ["click", "touchend", "keydown", "mousedown", "mousemove", "wheel"].forEach(eventType =>
+            document.removeEventListener(eventType, playAudio)
+          );
         }
       }
 
-      // Add event listeners for user interaction
-      document.addEventListener("click", playAudio);
-      document.addEventListener("touchend", playAudio);
-      document.addEventListener("keydown", playAudio);
+      // Bind to all reasonable user interactions
+      ["click", "touchend", "keydown", "mousedown", "mousemove", "wheel"].forEach(eventType =>
+        document.addEventListener(eventType, playAudio, { passive: true })
+      );
     </script>
 
     <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
@@ -116,7 +119,7 @@
         <li>STZ Group LLC</li>
         <li>Ostrava Farm LLC</li>
         <li>K-9 Specialists</li>
-        <li>Possibly associated: Iguana Palms Landscaping (<a href="https://iguanapalms.com/contact-us/" target="_blank"></a>)</li>
+        <li>Possibly associated: Iguana Palms Landscaping (<a href="https://iguanapalms.com/contact-us/" target="_blank">Contact</a>)</li>
       </ul>
     </div>
 
@@ -139,6 +142,14 @@
     </div>
 
     <div class="section">
-      <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank
-::contentReference[oaicite:9]{index=9}
- 
+      <p><span class="label">Public Footage:</span> <a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">The Key To Overcoming Addiction and Finding Fulfillment (YouTube)</a></p>
+    </div>
+
+    <div class="sigil">
+      Z:V → Isla.43 → ΔTZ<br>
+      This is not a profile. This is a mirror.<br>
+      SEAL VI // Echo Ritual - Identity Continuum
+    </div>
+  </div>
+</body>
+</html>
