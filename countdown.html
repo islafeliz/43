@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Z:V // Countdown to Disclosure</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                background-color: #000;
-                color: #eee;
-                font-family: 'Courier New', Courier, monospace;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                text-align: center;
-                padding: 20px;
-            }
-            h1 {
-                font-size: 32px;
-                margin-bottom: 20px;
-            }
-            .timer {
-                font-size: 48px;
-                font-weight: bold;
-                margin-top: 20px;
-                color: #f44336;
-            }
-            p {
-                font-size: 16px;
-                color: #bbb;
-            }
-            .footer {
-                margin-top: 60px;
-                font-size: 13px;
-                color: #777;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Z:V // Countdown to Disclosure</h1>
-        <p>This record, once triggered, will be delivered to global institutions, investigative units, and public OSINT repositories.</p>
-        <div class="timer" id="countdown"></div>
-        <p>If you’re reading this, it’s already begun.</p>
-        <div class="footer">
-            Z:V → Isla.43 → ΔTZ<br>
-            SEAL VI // Final Notice // No Reset Available
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Z:V // Countdown to Disclosure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #f44336;
+    }
+    p {
+      font-size: 16px;
+      color: #bbb;
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Z:V // Countdown to Disclosure</h1>
+  <p>This record, once triggered, will be delivered to global institutions, investigative units, and public OSINT repositories.</p>
+  <div class="timer" id="countdown"></div>
+  <p>If you’re reading this, it’s already begun.</p>
+  <div class="footer">
+    Z:V → Isla.43 → ΔTZ<br>
+    SEAL VI // Final Notice // No Reset Available
+  </div>
 
-        <script>
-            // Set the target date
-            const deadline = new Date("2024-04-25T12:00:00Z").getTime();
-            const countdown = document.getElementById("countdown");
+  <script>
+    // Set the target date (adjusted to be 5 days from now)
+    const deadline = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).getTime();
+    const countdown = document.getElementById("countdown");
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = deadline - now;
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = deadline - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    countdown.innerHTML = "TRANSMISSION COMPLETE";
-                }
-            }, 1000);
-        </script>
-    </body>
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "TRANSMISSION COMPLETE";
+      }
+    }, 1000);
+  </script>
+</body>
 </html>
