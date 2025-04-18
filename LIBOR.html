@@ -84,22 +84,18 @@
     <script>
       const audio = document.getElementById("echo-audio");
       let unlocked = false;
-
       function unlockAudioDirect(e) {
         if (unlocked) return;
         unlocked = true;
         try {
           audio.play();
-          console.log("AUDIO UNLOCKED");
         } catch (err) {
           console.warn("FAILED:", err);
         }
-
         ["click", "touchstart", "keydown"].forEach(evt =>
           window.removeEventListener(evt, unlockAudioDirect)
         );
       }
-
       ["click", "touchstart", "keydown"].forEach(evt =>
         window.addEventListener(evt, unlockAudioDirect)
       );
@@ -113,47 +109,45 @@
       <p><span class="label">Date of Birth:</span> November 1976</p>
       <p><span class="label">Nationality:</span> USA / Czech origin</p>
       <p><span class="label">Passport Number (US):</span> 536858079</p>
-      <p><span class="label">Known Aliases and Alternate Records:</span></p>
       <ul>
         <li>Libor Z.</li>
         <li>Libor Závalský</li>
         <li>Zalvaski / Zabalski</li>
-        <li>In Czech records: Libor Zavalský, IČO: 60030984 – active business in Czech Republic</li>
+        <li>In Czech records: Libor Zavalský, IČO: 60030984</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>🧬 FAMILY</h2>
-      <p><span class="label">Spouse:</span> Rachael Ashley Zavalsky</p>
+      <p><strong>Spouse:</strong> Rachael Ashley Zavalsky</p>
       <ul>
-        <li>Active operator in asset structure (buyer, co-manager, signatory)</li>
-        <li>Appears in all key documents as co-owner</li>
-        <li>Registered as agent in 2022 application (Ocala kennel)</li>
+        <li>Operator in asset structure</li>
+        <li>Appears in all key legal and corporate filings</li>
+        <li>Agent in 2022 application (kennel)</li>
       </ul>
-      <p><span class="label">Children:</span></p>
+      <p><strong>Children:</strong></p>
       <ul>
-        <li><strong>Ragnar Otakar Zavalsky</strong> – born October 23, 2022</li>
-        <li><strong>Zara Marie Zavalsky</strong> – born February 17, 2021</li>
-        <li><strong>Third child (older daughter)</strong> – born ~July 2019 (name undisclosed)</li>
+        <li>Ragnar Otakar – born Oct 23, 2022</li>
+        <li>Zara Marie – born Feb 17, 2021</li>
+        <li>Unnamed daughter – born ~July 2019</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>🏡 ADDRESSES (REAL LOCATIONS)</h2>
+      <h2>🏡 ADDRESSES</h2>
       <table>
         <tr><th>Address</th><th>Function</th></tr>
-        <tr><td>8201 SW 27th Ave, Ocala, FL</td><td>Home, system base, company HQ, dog breeding, palm showroom</td></tr>
-        <tr><td>2521 Hickory Head Rd, Quitman, GA</td><td>52-acre farm under CUVA (agri. exemption)</td></tr>
-        <tr><td>1441 Zenith Mill Rd, Roberta, GA</td><td>60-acre ranch, new K-9 base, Iguana Palms showroom</td></tr>
-        <tr><td>128 Lake Ridge Dr, Macon, GA</td><td>Luxury residence ($1M, 2023), likely residence</td></tr>
-        <tr><td>10486 NW 36th Dr, Jasper, FL</td><td>Residential complex (LLC owned, 2022)</td></tr>
-        <tr><td>4 E Howell Dr, Lakeland, GA</td><td>Residential flip (2022)</td></tr>
+        <tr><td>8201 SW 27th Ave, Ocala, FL</td><td>Home base, company HQ</td></tr>
+        <tr><td>2521 Hickory Head Rd, Quitman, GA</td><td>52-acre agricultural site</td></tr>
+        <tr><td>1441 Zenith Mill Rd, Roberta, GA</td><td>K-9 base, Iguana Palms showroom</td></tr>
+        <tr><td>128 Lake Ridge Dr, Macon, GA</td><td>Luxury home ($1M, 2023)</td></tr>
+        <tr><td>10486 NW 36th Dr, Jasper, FL</td><td>Residential (via LLC, 2022)</td></tr>
+        <tr><td>4 E Howell Dr, Lakeland, GA</td><td>Flip acquisition (2022)</td></tr>
       </table>
     </div>
 
     <div class="section">
-      <h2>💼 BUSINESS AND PUBLIC ACTIVITY</h2>
-      <p><strong>Companies (USA – FL & GA):</strong></p>
+      <h2>💼 BUSINESS</h2>
       <ul>
         <li>TZ Investment Group LLC</li>
         <li>Ostrava Farm LLC</li>
@@ -161,57 +155,58 @@
         <li>Ostrava Residency Quitman LLC</li>
         <li>2521 Hickory Head LLC</li>
         <li>128 Lake Ridge LLC</li>
-        <li>K-9 Specialists LLC (FL & GA)</li>
+        <li>K-9 Specialists LLC</li>
         <li>Iguana Palms LLC</li>
       </ul>
-      <p><strong>European Operations:</strong></p>
-      <ul>
-        <li>Czech Republic – IČO 60030984</li>
-        <li>Registered as sole proprietor</li>
-        <li>Potential invoicing / historical operations base</li>
-      </ul>
+      <p><strong>Czech Republic:</strong> IČO 60030984</p>
     </div>
 
     <div class="section">
-      <h2>🐕‍🦺 PROFESSION / PUBLIC IMAGE</h2>
+      <h2>🐕‍🦺 PUBLIC PROFILE</h2>
       <ul>
-        <li>K-9 expert and trainer (German Shepherds)</li>
-        <li>Owner: <strong>K-9 Specialists</strong></li>
-        <li>Palm nursery: <strong>Iguana Palms</strong></li>
+        <li>K-9 expert and breeder</li>
+        <li>Owner of K-9 Specialists</li>
+        <li>Operator of Iguana Palms</li>
       </ul>
-      <p><strong>Media & Web:</strong></p>
       <ul>
         <li><a href="https://k-9specialists.com" target="_blank">k-9specialists.com</a></li>
         <li><a href="https://iguanapalms.com" target="_blank">iguanapalms.com</a></li>
-        <li><a href="https://www.facebook.com/K9SpecialistsGSD/" target="_blank">Facebook – K9SpecialistsGSD</a></li>
-        <li><a href="https://www.facebook.com/IguanaPalms" target="_blank">Facebook – Iguana Palms</a></li>
+        <li><a href="https://www.facebook.com/K9SpecialistsGSD/" target="_blank">FB – K-9 Specialists</a></li>
+        <li><a href="https://www.facebook.com/IguanaPalms" target="_blank">FB – Iguana Palms</a></li>
         <li><a href="https://www.youtube.com/watch?v=difs_TWw0Ws" target="_blank">YouTube Clip</a></li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>📞 CONTACT DATA</h2>
-      <table>
-        <tr><th>Number / Email</th><th>Use</th></tr>
-        <tr><td>+1 (720) 320-4760</td><td>Personal (Colorado – historical)</td></tr>
-        <tr><td>+1 (352) 659-0638</td><td>K-9 Specialists (FL)</td></tr>
-        <tr><td>+1 (404) 326-0233</td><td>Iguana Palms (GA)</td></tr>
-        <tr><td>libor@k-9specialists.com</td><td>Main contact</td></tr>
-        <tr><td>zavalsky.tzgroup@gmail.com</td><td>Historic / secondary</td></tr>
-      </table>
+      <h2>📞 CONTACT</h2>
+      <ul>
+        <li>+1 (720) 320-4760 – Personal</li>
+        <li>+1 (352) 659-0638 – K-9 Specialists</li>
+        <li>+1 (404) 326-0233 – Iguana Palms</li>
+        <li>Email: libor@k-9specialists.com</li>
+        <li>Email (historic): zavalsky.tzgroup@gmail.com</li>
+      </ul>
     </div>
 
     <div class="section">
-      <h2>🎯 OPERATIONAL INSIGHTS</h2>
+      <h2>🔗 EXTERNAL INTELLIGENCE</h2>
       <ul>
-        <li><strong>No separation between private and business life.</strong><br>
-          All transactions under Libor and Rachael's personal names.</li>
-        <li><strong>Childbirth aligned with expansion.</strong><br>
-          Ragnar (2022), Zara (2021) coincide with Jasper / Quitman / Lakeland acquisitions.</li>
-        <li><strong>Home = HQ = Registry Address.</strong><br>
-          8201 SW 27th Ave is the center of all operations.</li>
-        <li><strong>Family = Operational Cell.</strong><br>
-          Husband and wife as managers, agents, signatories.</li>
+        <li><a href="https://www.linkedin.com/in/libor-zavalsky-16519a31/" target="_blank">LinkedIn – Professional Profile</a></li>
+        <li><a href="https://www.facebook.com/libor.zavalsky" target="_blank">Facebook – Private Profile</a></li>
+        <li><a href="https://rocketreach.co/libor-zavalsky-email_10387081" target="_blank">RocketReach – Contact Data</a></li>
+        <li><a href="https://search.sunbiz.org/" target="_blank">Sunbiz – FL Business Registry</a></li>
+        <li><a href="https://www.bizprofile.net/fl/ocala/ostrava-farm-llc" target="_blank">Ostrava Farm LLC Profile</a></li>
+        <li><a href="https://bavarodigital.net/" target="_blank">Bávaro Digital – Dominican Media</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 OPERATIONAL INSIGHT</h2>
+      <ul>
+        <li>No boundary between personal and asset sphere</li>
+        <li>Every child born during real estate expansion</li>
+        <li>Home = HQ = Registry</li>
+        <li>Family acts as operational cell</li>
       </ul>
     </div>
 
