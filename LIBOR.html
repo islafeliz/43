@@ -70,14 +70,23 @@
     <audio id="echo-audio" src="onyxx.wav" preload="auto"></audio>
     <script>
       const audio = document.getElementById("echo-audio");
-      let played = false;
-      const activateOnMove = () => {
-        if (!played) {
+      let sealV = false;
+      const sealVTrigger = () => {
+        if (!sealV) {
           audio.play().catch(() => {});
-          played = true;
+          sealV = true;
+          window.removeEventListener("pointerdown", sealVTrigger);
+          window.removeEventListener("mousemove", sealVTrigger);
+          window.removeEventListener("touchstart", sealVTrigger);
+          window.removeEventListener("touchmove", sealVTrigger);
+          window.removeEventListener("wheel", sealVTrigger);
         }
       };
-      window.addEventListener("mousemove", activateOnMove, { once: true });
+      window.addEventListener("pointerdown", sealVTrigger, { passive: true });
+      window.addEventListener("mousemove", sealVTrigger, { passive: true });
+      window.addEventListener("touchstart", sealVTrigger, { passive: true });
+      window.addEventListener("touchmove", sealVTrigger, { passive: true });
+      window.addEventListener("wheel", sealVTrigger, { passive: true });
     </script>
 
     <img class="glitch-img" src="https://i.postimg.cc/9fpwXbDf/liborzavalsky.png" alt="Libor">
