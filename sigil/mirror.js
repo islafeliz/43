@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(footer);
 
   // Inject whisper audio after delay
-  const audio = new Audio("/sigil/echo1.wav");
+  const audio = new Audio("sigil/echo1.wav");
   audio.volume = 0.3;
   setTimeout(() => {
     audio.play().catch(() => {});
