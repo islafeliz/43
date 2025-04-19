@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro");
   if (intro) {
     setTimeout(() => {
-      intro.style.transition = "opacity 1s ease-in-out";
+      intro.style.transition = "opacity 0.5s ease-in-out";
       intro.style.opacity = 1;
     }, 1600);
   }
