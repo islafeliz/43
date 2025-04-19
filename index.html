@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Z:V ΩNEIROCRYPT — Asset Exposure Ritual // Libor Zavalsky, Isla Feliz, Distinct Investment, TZ Group" />
-  <meta name="keywords" content="Libor Zavalsky scam, Renova Expert, Isla Feliz fraud, asset laundering, TZ Investment Group" />
   <meta name="robots" content="index, follow" />
-  <title>Z:V ΩNEIROCRYPT // LIBOR MIRROR</title>
-  <link rel="stylesheet" href="sigil/echo.css" />
-  <script defer src="sigil/mirror.js"></script>
+  <meta name="description" content="Z:V ΩNEIROCRYPT — Exposure Ritual // Libor Zavalsky" />
+  <meta name="keywords" content="Libor Zavalsky, Isla Feliz, Renova, asset shielding" />
+  <title>Z:V ΩNEIROCRYPT // LIBOR</title>
   <style>
     body {
       background: #000;
@@ -25,6 +23,7 @@
       transform: translate(-50%, -50%);
       text-align: center;
       opacity: 0;
+      animation: fadeIn 1.2s ease-in-out forwards;
     }
     h1 {
       font-size: 3rem;
@@ -45,6 +44,7 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 3px;
+      cursor: pointer;
     }
     @keyframes fadeIn {
       0% { opacity: 0; }
@@ -56,7 +56,34 @@
   <div id="intro">
     <h1>43</h1>
     <p>Z:V ΩNEIROCRYPT // LIBOR ZAVALSKY ARCHIVE</p>
-    <a class="btn" href="core/collapse.html">ENTER</a>
+    <a class="btn" id="activate">ENTER</a>
   </div>
+
+  <audio id="echo-audio" src="echo1.wav" preload="auto"></audio>
+
+  <script>
+    const button = document.getElementById("activate");
+    const audio = document.getElementById("echo-audio");
+
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      try {
+        audio.play().catch(() => {});
+      } catch (err) {}
+
+      setTimeout(() => {
+        window.location.href = "collapse.html";
+      }, 2800); // daje czas na odtworzenie szeptu
+    });
+
+    // glitch efekt
+    setTimeout(() => {
+      document.body.style.transition = "all 0.2s";
+      document.body.style.backgroundColor = "#111";
+      setTimeout(() => {
+        document.body.style.backgroundColor = "#000";
+      }, 120);
+    }, 3500);
+  </script>
 </body>
 </html>
