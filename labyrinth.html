@@ -1,109 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>LABYRINTH // Corporate Map</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="echo.css" />
+  <meta charset="UTF-8">
+  <title>LABYRINTH // Entity Structure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A forensic outline of interconnected entities tied to Libor Zavalsky." />
+  <meta name="keywords" content="entity structure, asset shielding, Libor Zavalsky, TZ Investment, shell companies" />
   <style>
     body {
-      background-color: #000;
+      background-color: #111;
       color: #eee;
       font-family: 'Courier New', monospace;
-      margin: 0;
       padding: 40px;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
     }
     h1 {
-      font-size: 22px;
       color: #0ff;
-      text-align: center;
       margin-bottom: 40px;
     }
-    .map {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+    .entity {
+      margin-bottom: 25px;
+      padding-left: 20px;
+      border-left: 2px solid #444;
     }
-    .node {
-      border: 1px solid #444;
-      padding: 20px;
-      background: #111;
-      width: 300px;
-    }
-    .node h2 {
-      margin: 0 0 10px 0;
+    .entity h2 {
       font-size: 16px;
+      margin: 0 0 6px 0;
       color: #9ef;
     }
-    .node p {
+    .entity p {
       margin: 0;
       font-size: 14px;
+      line-height: 1.5;
     }
-    .connector {
-      width: 2px;
-      height: 40px;
-      background: #555;
+    .next {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #888;
+    }
+    a {
+      color: #9cf;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>STRUCTURE MAP // Z:V → Isla.43 → ΔTZ</h1>
+  <div class="container">
+    <h1>LABYRINTH // Entity Structure</h1>
 
-  <div class="map">
-    <div class="node">
-      <h2>33 Renova Expert S.R.L.</h2>
-      <p>Dominican Republic</p>
-      <p>Status: Bankrupt (2018)</p>
-    </div>
-    <div class="connector"></div>
-
-    <div class="node">
-      <h2>Distinct Investment Holdings LLC</h2>
-      <p>Acquired 43 units from Renova via foreclosure</p>
-      <p>Formed with Jarek Tadla</p>
-    </div>
-    <div class="connector"></div>
-
-    <div class="node">
+    <div class="entity">
       <h2>TZ Investment Group LLC</h2>
-      <p>Purchases made in cash</p>
-      <p>Created before Renova collapsed</p>
+      <p>Founded in 2017. Core shell. Formed prior to Renova collapse. Possibly used as conduit for post-Dominican funds.</p>
     </div>
-    <div class="connector"></div>
 
-    <div class="node">
+    <div class="entity">
       <h2>Ostrava Farm LLC</h2>
-      <p>8201 SW 27th Ave, Ocala, FL</p>
-      <p>No mortgage. Registered to Libor Zavalsky</p>
+      <p>Base of operations in Ocala, FL (8201 SW 27th Ave). Registered to Libor and Rachael Zavalsky. No mortgage. </p>
     </div>
-    <div class="connector"></div>
 
-    <div class="node">
-      <h2>K-9 Specialists LLC</h2>
-      <p>Animal training operations</p>
-      <p>Cover entity for property & movement</p>
+    <div class="entity">
+      <h2>K-9 Specialists LLC (FL & GA)</h2>
+      <p>Dog training front. Masking flow of cash and asset conversion under animal business.</p>
     </div>
-    <div class="connector"></div>
 
-    <div class="node">
+    <div class="entity">
       <h2>Iguana Palms LLC</h2>
-      <p>Nursery / Landscaping business</p>
-      <p>Connected to showroom in Georgia</p>
+      <p>Landscaping/palm nursery business. Registered showroom in Roberta, GA. Interlinked with K-9 facilities.</p>
     </div>
-    <div class="connector"></div>
 
-    <div class="node">
+    <div class="entity">
       <h2>2521 Hickory Head LLC</h2>
-      <p>CUVA-enrolled land (Quitman, GA)</p>
-      <p>Used for potential rental/residential use</p>
+      <p>CUVA-enrolled property in Quitman, GA. Suspected misuse of agricultural exemption for non-agricultural use.</p>
+    </div>
+
+    <div class="entity">
+      <h2>128 Lake Ridge LLC</h2>
+      <p>Owns $1M residence in Macon, GA. No listed financing. Directly controlled by Zavalskys.</p>
+    </div>
+
+    <div class="entity">
+      <h2>Ostrava Residency Quitman LLC</h2>
+      <p>Recent registration linked to same parcel as 2521 Hickory Head. Suspected preparation for rental operations.</p>
+    </div>
+
+    <div class="entity">
+      <h2>STZ Group LLC (inactive)</h2>
+      <p>Former entity linked to permit violations in Marion County, FL. No longer active, but part of original shell chain.</p>
+    </div>
+
+    <div class="next">
+      <a href="prosecution.html">⚖️ Proceed to: Legal Proceedings & Evidence</a>
     </div>
   </div>
-
-  <p style="margin-top: 60px; font-size: 14px; text-align: center; color: #777;">
-    Layered entities. Jurisdiction hopping. Zero transparency.<br>
-    Full chain of asset mutation identified.<br>
-    Z:V Archive → trace: complete
-  </p>
 </body>
 </html>
