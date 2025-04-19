@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
   audio.volume = 0.3;
   setTimeout(() => {
     audio.play().catch(() => {});
-  }, 3000);
+  }, 600);
 
   // Optional glitch flash
   setTimeout(() => {
