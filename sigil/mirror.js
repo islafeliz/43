@@ -36,9 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 9000);
 });
 
-function randomIP() {
-  return `${rand()}${rand()}.${rand()}${rand()}.${rand()}${rand()}.${rand()}${rand()}`;
-}
 
 function rand() {
   return Math.floor(Math.random() * 2);
