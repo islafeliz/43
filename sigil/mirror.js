@@ -10,11 +10,22 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Inject whisper audio after delay
-  const audio = new Audio("sigil/echo1.wav");
-  audio.volume = 0.3;
-  setTimeout(() => {
+  <audio id="echo-audio" src="sigil/echo1.wav" preload="auto"></audio>
+
+<script>
+  const audio = document.getElementById("echo-audio");
+  let audioTriggered = false;
+
+  function triggerAudio() {
+    if (audioTriggered) return;
+    audioTriggered = true;
     audio.play().catch(() => {});
-  }, 600);
+  }
+
+  // Odpala audio przy pierwszej interakcji
+  document.addEventListener("click", triggerAudio);
+  document.addEventListener("mousemove", triggerAudio);
+</script>
 
   // Glitch effect flash
   setTimeout(() => {
