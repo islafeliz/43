@@ -10,7 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Display fake fingerprint
-  const fakeIP = `IP: ${randomIP()} | Browser: ${navigator.userAgent.split(' ')[0]} | Lang: ${navigator.language}`;
   const footer = document.createElement("div");
   footer.style.position = "fixed";
   footer.style.bottom = "10px";
@@ -18,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
   footer.style.fontSize = "12px";
   footer.style.color = "#444";
   footer.style.fontFamily = "monospace";
-  footer.innerText = `we see you. ${fakeIP}`;
   document.body.appendChild(footer);
 
   // Inject whisper audio after delay
