@@ -1,119 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>COLLAPSE // 33 → 8201</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="echo.css">
+  <meta charset="UTF-8" />
+  <title>FINAL NOTICE // COLLAPSE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Final warning to Libor Zavalsky. Time-bound demand for restitution." />
+  <meta name="keywords" content="Libor Zavalsky, Isla Feliz, 43 units, restitution, final notice" />
   <style>
     body {
-      background: #000;
-      color: #f8f8f8;
+      background-color: #111;
+      color: #eee;
       font-family: 'Courier New', monospace;
       padding: 40px;
+      margin: 0;
+    }
+    .container {
       max-width: 800px;
       margin: auto;
-      line-height: 1.6;
     }
     h1 {
-      font-size: 20px;
-      color: #f00;
-      border-bottom: 1px solid #333;
-      padding-bottom: 8px;
+      color: #f55;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.6;
     }
     .timer {
+      font-size: 22px;
       color: #0ff;
-      font-size: 18px;
-      margin-top: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .section {
+      margin-top: 40px;
     }
     a {
-      color: #9ef;
+      color: #9cf;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
   <script>
-    // 5-day countdown from load
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener("DOMContentLoaded", () => {
+      const el = document.getElementById("countdown");
       const start = Date.now();
-      const end = start + 5 * 24 * 60 * 60 * 1000;
-      const el = document.getElementById('countdown');
+      const deadline = start + 5 * 24 * 60 * 60 * 1000; // 5 days
 
-      setInterval(() => {
+      function updateTimer() {
         const now = Date.now();
-        const delta = end - now;
-        if (delta <= 0) {
+        const remaining = deadline - now;
+
+        if (remaining <= 0) {
           el.innerText = "EXPIRED";
           return;
         }
-        const d = Math.floor(delta / (1000 * 60 * 60 * 24));
-        const h = Math.floor((delta / (1000 * 60 * 60)) % 24);
-        const m = Math.floor((delta / (1000 * 60)) % 60);
-        const s = Math.floor((delta / 1000) % 60);
-        el.innerText = `${d}d ${h}h ${m}m ${s}s`;
-      }, 1000);
+
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+        const seconds = Math.floor((remaining / 1000) % 60);
+
+        el.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
     });
   </script>
 </head>
 <body>
-  <h1>THIS IS NOT A THREAT</h1>
-  <p>
-    This is the final record of what has happened — and what has already been noticed.<br><br>
-    You were the last formal representative of 33 Renova Expert S.R.L.<br>
-    Your name appears in the liquidation order of the Supreme Court of the Dominican Republic.<br>
-    You didn't walk away like the others. You stayed to control what was left.<br><br>
-    That was not an accident.<br><br>
-    Together with Jarek Tadla, you activated Distinct Investment Holdings LLC.<br>
-    A loan was created that was never meant to be repaid.<br>
-    You improvised a fake debt.<br><br>
-    43 Isla Feliz apartments were not lost — they were taken.<br>
-    You architected the transfer.<br>
-    You controlled the final documents.<br><br>
-    Those assets didn't vanish.<br>
-    They transformed — through flips, trusts, shell companies.<br><br>
-    They took form as:<br>
-    – a 20-acre farm in Ocala<br>
-    – land rezoned for commercial use<br>
-    – two properties bought for $950,000, flipped for $170,000<br>
-    – a multi-family complex bought for $1,980,000 in cash<br>
-    – entities: K-9 Specialists, Iguana Palms Landscaping, Ostrava Farm, STZ Group, TZ1 to TZ6<br><br>
-    No loans. No disclosures. No taxes.<br>
-    Just layered transfers, inflated values, and silence.<br><br>
-    You planned this.<br>
-    You used shells, nominal owners, and timing synced with Renova's collapse.<br><br>
-    This was never meant to surface.<br>
-    But chronology, document, signature — they speak.
-  </p>
+  <div class="container">
+    <h1>FINAL NOTICE</h1>
 
-  <h2>I demand one number:</h2>
-  <p><strong>120,000 USD</strong> — returned quietly, without commentary.<br>
-  You have 5 business days.</p>
+    <p>This is the final record of what has happened — and what has already been noticed.</p>
+    <p>You were the last formal representative of 33 Renova Expert S.R.L. Your name appears in the liquidation order of the Dominican Supreme Court. You stayed behind. That was not an accident.</p>
 
-  <p class="timer">Time to exposure: <span id="countdown">...</span></p>
+    <p>43 units were transferred under your watch. You orchestrated their reallocation. The assets did not disappear. They transformed.</p>
 
-  <p>After that, full documentation will be delivered to:</p>
-  <ul>
-    <li>FBI – Financial Crimes Division</li>
-    <li>IRS – Criminal Investigations</li>
-    <li>OCCRP / ICIJ / ProPublica</li>
-    <li>Legal media in the Dominican Republic</li>
-    <li>Whistleblower archives</li>
-    <li>Former investors, former employees, K-9 and Iguana Palms clients</li>
-  </ul>
+    <p>We tracked the flips. The shell structures. The land transfers. The silent LLC registrations. And the cash. You already know this is true.</p>
 
-  <p><strong>What you built will not be taken.<br>
-  It will be revealed.</strong></p>
+    <p><strong>We demand:</strong> restitution of <strong>120,000 USD</strong> — silent, discreet, no commentary.</p>
+    <p class="timer">Time remaining: <span id="countdown">loading...</span></p>
 
-  <p>Your dogs won’t understand why you’re gone.<br>
-  Your wife might.<br>
-  Your children will find you in Google.</p>
+    <div class="section">
+      <p>If there is no contact or resolution within the time limit, all files, documents and witness lists will be forwarded to:</p>
+      <ul>
+        <li>FBI – Financial Crimes Division</li>
+        <li>IRS – Criminal Investigations</li>
+        <li>OCCRP, ICIJ, ProPublica</li>
+        <li>Legal media in the Dominican Republic</li>
+        <li>Whistleblower archives</li>
+        <li>Former investors, former staff, K-9 and Iguana Palms clients</li>
+      </ul>
+    </div>
 
-  <p>I don’t expect a reply.<br>
-  But silence will be treated as confirmation.</p>
-
-  <p>I only want one number: <strong>120,000 dollars</strong><br>
-  I now allow you to return it. I didn't add interest.</p>
-
-  <p>Contact: <a href="mailto:zv.echo@proton.me">zv.echo@proton.me</a></p>
-  <hr>
-  <p>Z:V  → Isla.43 → ΔTZ</p>
+    <p>There will be no further notice.<br/>Silence will be treated as confirmation.</p>
+    <p><strong>Contact: <a href="mailto:zv.echo@proton.me">zv.echo@proton.me</a></strong></p>
+  </div>
 </body>
 </html>
