@@ -1,4 +1,4 @@
-// /sigil/mirror.js – extended version with audio + fingerprint
+// /sigil/mirror.js – stripped version: no fake data, only real echo
 
 window.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro");
@@ -9,16 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 1200);
   }
 
-  // Display fake fingerprint
-  const footer = document.createElement("div");
-  footer.style.position = "fixed";
-  footer.style.bottom = "10px";
-  footer.style.left = "10px";
-  footer.style.fontSize = "12px";
-  footer.style.color = "#444";
-  footer.style.fontFamily = "monospace";
-  document.body.appendChild(footer);
-
   // Inject whisper audio after delay
   const audio = new Audio("sigil/echo1.wav");
   audio.volume = 0.3;
@@ -26,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     audio.play().catch(() => {});
   }, 600);
 
-  // Optional glitch flash
+  // Glitch effect flash
   setTimeout(() => {
     document.body.style.transition = "all 0.2s";
     document.body.style.backgroundColor = "#111";
@@ -35,8 +25,3 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 120);
   }, 3500);
 });
-
-
-function rand() {
-  return Math.floor(Math.random() * 2);
-}
