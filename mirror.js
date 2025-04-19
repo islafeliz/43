@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Inject whisper audio after delay
-  <audio id="echo-audio" src="sigil/echo1.wav" preload="auto"></audio>
+  <audio id="echo-audio" src="echo1.wav" preload="auto"></audio>
 
 <script>
   const audio = document.getElementById("echo-audio");
