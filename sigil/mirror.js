@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       intro.style.transition = "opacity 0.5s ease-in-out";
       intro.style.opacity = 1;
-    }, 1600);
+    }, 1200);
   }
 
   // Display fake fingerprint
