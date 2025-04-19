@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       document.body.style.backgroundColor = "#000";
     }, 120);
-  }, 9000);
+  }, 3500);
 });
 
 
