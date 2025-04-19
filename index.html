@@ -2,88 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Z:V // Echo Isla.43</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Z:V ΩNEIROCRYPT — Exposure Ritual // Libor Zavalsky" />
-  <meta name="keywords" content="Libor Zavalsky, Isla Feliz, Renova, asset shielding" />
-  <title>Z:V ΩNEIROCRYPT // LIBOR</title>
+  <meta name="description" content="Z:V Archive // Isla.43 → ΔTZ. A memory that resurfaced." />
+  <meta name="keywords" content="Libor Zavalsky, Isla Feliz, 33 Renova Expert, asset shielding" />
   <style>
     body {
-      background: #000;
-      color: #f0f0f0;
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    #intro {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background-color: #111;
+      color: #eee;
+      font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      opacity: 0;
-      animation: fadeIn 1.2s ease-in-out forwards;
+      padding: 40px;
     }
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      margin: 0;
+    .container {
+      max-width: 700px;
+      margin: auto;
     }
-    p {
-      font-size: 1rem;
+    .sigil {
+      width: 220px;
+      margin: 30px auto;
+    }
+    .whisper {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 10px;
+    }
+    .sub {
+      margin-top: 30px;
+      font-size: 14px;
       color: #888;
-      margin-top: 20px;
     }
-    a.btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      color: #000;
-      background: #0ff;
+    a {
+      color: #99d;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 3px;
-      cursor: pointer;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 30px auto;
+      color: #ccc;
+      font-size: 16px;
+      border-left: 2px solid #444;
+      padding-left: 12px;
+      width: 90%;
+    }
+    .links {
+      margin-top: 50px;
+      line-height: 1.8;
+    }
+    .start {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 10px 18px;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <div id="intro">
-    <h1>43</h1>
-    <p>Z:V ΩNEIROCRYPT // LIBOR ZAVALSKY ARCHIVE</p>
-    <a class="btn" id="activate">ENTER</a>
+  <div class="container">
+    <div class="sigil">Z:V → Isla.43 → ΔTZ</div>
+    <h1>Isla.43 // Echo // ΔTZ</h1>
+    <p class="whisper">The transaction was silent.</p>
+    <p class="whisper">But it echoed.</p>
+
+    <img src="https://i.postimg.cc/fRDjZBCV/DALL-E-2025-04-18-05-51-30-A-dark-ritualistic-poster-design-in-a-moody-cinematic-style-Black-tex.webp" alt="Z:V Echo Poster" class="sigil" />
+    <p class="sub">This image was archived at 43:ZV</p>
+
+    <blockquote>
+      "Suprema Corte de Justicia — 974-2018-SREE-00018<br/>
+      43 units. 3 transfers. 1 memory."
+    </blockquote>
+
+    <p class="sub">You don’t remember all 43.<br/>We do.</p>
+
+    <a href="libor.html" class="start">ENTER ARCHIVE</a>
+
+    <div class="links">
+      <a href="delta-chain.html">⛓ Timeline: DR → USA</a><br/>
+      <a href="labyrinth.html">🗺 Entity Map</a><br/>
+      <a href="prosecution.html">⚖️ Charges & Witnesses</a><br/>
+      <a href="collapse.html">🕯 Final Notice</a>
+    </div>
   </div>
-
-  <audio id="echo-audio" src="echo1.wav" preload="auto"></audio>
-
-  <script>
-    const button = document.getElementById("activate");
-    const audio = document.getElementById("echo-audio");
-
-    button.addEventListener("click", function (e) {
-      e.preventDefault();
-      try {
-        audio.play().catch(() => {});
-      } catch (err) {}
-
-      setTimeout(() => {
-        window.location.href = "collapse.html";
-      }, 2800); // daje czas na odtworzenie szeptu
-    });
-
-    // glitch efekt
-    setTimeout(() => {
-      document.body.style.transition = "all 0.2s";
-      document.body.style.backgroundColor = "#111";
-      setTimeout(() => {
-        document.body.style.backgroundColor = "#000";
-      }, 120);
-    }, 3500);
-  </script>
 </body>
 </html>
