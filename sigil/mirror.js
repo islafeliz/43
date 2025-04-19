@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       intro.style.transition = "opacity 1s ease-in-out";
       intro.style.opacity = 1;
-    }, 2000);
+    }, 1600);
   }
 
   // Display fake fingerprint
@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
   audio.volume = 0.3;
   setTimeout(() => {
     audio.play().catch(() => {});
-  }, 6000);
+  }, 3000);
 
   // Optional glitch flash
   setTimeout(() => {
