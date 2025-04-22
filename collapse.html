@@ -47,7 +47,7 @@
     window.addEventListener(\"DOMContentLoaded\", () => {
       const el = document.getElementById(\"countdown\");
       const start = Date.now();
-      const deadline = start + 5 * 24 * 60 * 60 * 1000;
+      const deadline = new Date("2025-04-30T23:59:59").getTime();
       function updateTimer() {
         const now = Date.now();
         const remaining = deadline - now;
