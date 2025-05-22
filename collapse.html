@@ -1,148 +1,144 @@
-<!-- collapse.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>FINAL NOTICE // Z:V COLLAPSE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Final warning issued to Libor Zavalsky. Restitution demand – Isla Feliz asset transfer case." />
-  <style>
-    body {
-      background-color: #111;
-      color: #eee;
-      font-family: 'Courier New', monospace;
-      padding: 40px;
-      margin: 0;
-    }
-    .container {
-      max-width: 850px;
-      margin: auto;
-    }
-    h1 {
-      color: #f55;
-      margin-bottom: 30px;
-    }
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    .timer {
-      font-size: 18px;
-      color: #0ff;
-      font-weight: bold;
-      margin: 30px 0;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    a {
-      color: #9cf;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const el = document.getElementById("countdown");
+    <head>
+        <meta charset="UTF-8" />
+        <title>FINAL NOTICE // Z:V COLLAPSE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: #111;
+                color: #eee;
+                font-family: 'Courier New', monospace;
+                padding: 40px;
+                margin: 0;
+            }
+            .container {
+                max-width: 850px;
+                margin: auto;
+            }
+            h1 {
+                color: #f55;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            ul {
+                margin-left: 20px;
+            }
+            .wallet {
+                color: #f55;
+                font-weight: bold;
+                font-size: 22px;
+                margin: 20px 0;
+                padding: 15px;
+                border: 2px solid #f55;
+                text-align: center;
+                background-color: #1a1a1a;
+            }
+            #megaCountdown {
+                font-size: 36px;
+                font-weight: bold;
+                text-align: center;
+                color: #f55;
+                margin-bottom: 50px;
+                padding: 20px 0;
+                border-top: 2px dashed #f55;
+                border-bottom: 2px dashed #f55;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const megaEl = document.getElementById("megaCountdown");
+                const megaDeadline = new Date("2025-05-30T23:59:00").getTime();
 
-    // Ustaw konkretną datę zakończenia (np. 28 kwietnia 2025, 23:59:59)
-    const deadline = new Date("2025-04-30T23:59:59").getTime();
+                function updateMega() {
+                    const now = Date.now();
+                    const left = megaDeadline - now;
+                    if (left <= 0) {
+                        megaEl.innerText = "Δ TIME ENDED Δ";
+                        return;
+                    }
+                    const d = Math.floor(left / (1000 * 60 * 60 * 24));
+                    const h = Math.floor((left / (1000 * 60 * 60)) % 24);
+                    const m = Math.floor((left / (1000 * 60)) % 60);
+                    const s = Math.floor((left / 1000) % 60);
+                    megaEl.innerText = `⏳ ${d} DAYS ${h} HOURS ${m} MIN ${s} SEC`;
+                }
 
-    function updateTimer() {
-      const now = Date.now();
-      const remaining = deadline - now;
-      if (remaining <= 0) {
-        el.innerText = "EXPIRED";
-        return;
-      }
-      const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
-      const h = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-      const m = Math.floor((remaining / (1000 * 60)) % 60);
-      const s = Math.floor((remaining / 1000) % 60);
-      el.innerText = `${d}d ${h}h ${m}m ${s}s`;
-    }
+                updateMega();
+                setInterval(updateMega, 1000);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="megaCountdown">LOADING...</div>
+            <h1>FINAL NOTICE</h1>
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  });
-</script>
-</head>
-<body>
-  <div class="container">
-    <h1>FINAL NOTICE</h1>
+            <p>This is not a threat. This is the final record of what has happened — and what has already been noticed.</p>
 
-    <p>This is not a threat.  
-    This is the final record of what has happened — and what has already been noticed.</p>
+            <p>You were the last formal representative of 33 Renova Expert S.R.L. Your name appears in the liquidation order of the Supreme Court of the Dominican Republic. You didn’t walk away like the others. You stayed to control what was left.</p>
 
-    <p>You were the last formal representative of 33 Renova Expert S.R.L.  
-    Your name appears in the liquidation order of the Supreme Court of the Dominican Republic.  
-    You didn’t walk away like the others. You stayed to control what was left.</p>
+            <p>That was not an accident.</p>
 
-    <p>That was not an accident.</p>
+            <p>Together with Jarek Tadla you initiated Distinct Investment Holdings LLC. A loan was created — one that was never meant to be paid. You improvised a fake debt.</p>
 
-    <p>Together with Jarek Tadla you initiated Distinct Investment Holdings LLC.  
-    A loan was created — one that was never meant to be paid.  
-    You improvised a fake debt.</p>
+            <p>43 apartments at Isla Feliz were not lost. They were taken. You were the architect of their transfer. You controlled the final documents.</p>
 
-    <p>43 apartments at Isla Feliz were not lost. They were taken.  
-    You were the architect of their transfer.  
-    You controlled the final documents.</p>
+            <p>These assets did not disappear. They transformed — through flips, trusts, shell entities.</p>
 
-    <p>These assets did not disappear.  
-    They transformed — through flips, trusts, shell entities.</p>
+            <p>They took the form of:</p>
+            <ul>
+                <li>a 20-acre farm in Ocala</li>
+                <li>land rezoned for commercial use</li>
+                <li>two properties at $950,000 each, resold for $170,000</li>
+                <li>a $1.98M multi-unit complex, paid in cash</li>
+                <li>entities: K-9 Specialists, Iguana Palms Landscaping, Ostrava Farm, STZ Group, TZ1 through TZ6</li>
+            </ul>
 
-    <p>They took the form of:</p>
-    <ul>
-      <li>a 20-acre farm in Ocala</li>
-      <li>land rezoned for commercial use</li>
-      <li>two properties at $950,000 each, resold for $170,000</li>
-      <li>a $1.98M multi-unit complex, paid in cash</li>
-      <li>entities: K-9 Specialists, Iguana Palms Landscaping, Ostrava Farm, STZ Group, TZ1 through TZ6</li>
-    </ul>
+            <p>No loans. No disclosures. No taxes. Just synchronized transfers, inflated values, and silence.</p>
 
-    <p>No loans. No disclosures. No taxes.  
-    Just synchronized transfers, inflated values, and silence.</p>
+            <p>You planned this. You used shell companies, nominal owners, and a timeline perfectly synced to Renova’s collapse.</p>
 
-    <p>You planned this.  
-    You used shell companies, nominal owners, and a timeline perfectly synced to Renova’s collapse.</p>
+            <p>This was never supposed to surface... But chronology, document, signature.</p>
 
-    <p>This was never supposed to surface...  
-    But chronology, document, signature.</p>
+            <p>You converted assets into a quiet fortune. Now that fortune speaks louder than your lawyers.</p>
 
-    <p>You converted assets into a quiet fortune.  
-    Now that fortune speaks louder than your lawyers.</p>
+            <h2>We demand one number:</h2>
+            <p><strong>120,000 USD</strong> — returned quietly, without commentary.</p>
 
-    <h2>We demand one number:</h2>
-    <p><strong>120,000 USD</strong> — returned quietly, without commentary.</p>
+            <p>To resolve this:</p>
 
-    <p class="timer">Time remaining: <span id="countdown">loading...</span></p>
+            <p><strong>Send USDT (ERC-20) to the following wallet:</strong></p>
+            <p class="wallet">0xF43C99ddA81345F21eAdF33B1576FE798989cfAD</p>
 
-    <p>If there is no contact or resolution, the full documentation will be distributed to:</p>
-    <ul>
-      <li>FBI – Financial Crimes Division</li>
-      <li>IRS – Criminal Investigations</li>
-      <li>OCCRP / ICIJ / ProPublica</li>
-      <li>Dominican Republic legal media</li>
-      <li>Whistleblower archives</li>
-      <li>Former investors, former staff, clients of K-9 and Iguana Palms</li>
-    </ul>
+            <p>This is the only address authorized to receive the full settlement. No intermediaries. No deviations.</p>
 
-    <p><strong>What you built will not be taken.  
-    It will be exposed.</strong></p>
+            <p><strong>Time remaining:</strong> EXPIRED</p>
 
-    <p>Your dogs won’t understand why you’re gone.  
-    Your wife might.  
-    Your children will find you in Google.</p>
+            <p>If there is no contact or resolution, the full documentation will be distributed to:</p>
+            <ul>
+                <li>FBI – Financial Crimes Division</li>
+                <li>IRS – Criminal Investigations</li>
+                <li>OCCRP / ICIJ / ProPublica</li>
+                <li>Dominican Republic legal media</li>
+                <li>Whistleblower archives</li>
+                <li>Former investors, former staff, clients of K-9 and Iguana Palms</li>
+            </ul>
 
-    <p>I don’t expect a reply.  
-    But silence will be treated as confirmation.</p>
+            <p><strong>What you built will not be taken. It will be exposed.</strong></p>
 
-    <p>I only want one number: <strong>120,000 dollars</strong>  
-    I now allow you to return it. I didn’t add interest.</p>
+            <p>Your dogs won’t understand why you’re gone. Your wife might. Your children will find you in Google.</p>
 
-    <p class="sigil">Z:V → Isla.43 → ΔTZ</p>
-  </div>
-</body>
+            <p>I don’t expect a reply. But silence will be treated as confirmation.</p>
+
+            <p><strong>The amount is fixed: 120,000 dollars</strong><br />
+                Return it now — directly and only to:<br />
+                <span style="color:#f55;">USDT (ERC-20): 0xF43C99ddA81345F21eAdF33B1576FE798989cfAD</span></p>
+
+            <p>Z:V → Isla.43 → ΔTZ</p>
+        </div>
+    </body>
 </html>
